@@ -1,0 +1,97 @@
+/* Define global variables for spacing */
+$mobile-padding: 16px; /* Padding for mobile */
+$tablet-padding: 24px; /* Padding for tablet */
+
+$font-size-xs: 0.75rem; // Extra small text (12px)
+$font-size-sm: 1rem; // Small text (16px)
+$font-size-md: 1.25rem; // Medium text (20px)
+$font-size-lg: 1.5rem; // Large text (24px)
+$font-size-xl: 2rem; // Extra large text (32px)
+$font-size-xxl: 3rem; // Super large text (48px)
+
+$heading-font-size-h1: 3.5rem; // Font size for h1
+$heading-font-size-h2: 2.5rem; // Font size for h2
+$heading-font-size-h3: 2rem; // Font size for h3
+$heading-font-size-h4: 1.75rem; // Font size for h4
+$heading-font-size-h5: 1.5rem; // Font size for h5
+$heading-font-size-h6: 1.25rem; // Font size for h6
+
+$line-height-normal: 1.5; // Default line height
+$line-height-tight: 1.2; // Tight line height
+$line-height-loose: 1.9; // Loose line height
+
+// Margin variables
+$margin-xs: 0.5rem; // Extra small margin
+$margin-sm: 1rem; // Small margin
+$margin-md: 2rem; // Medium margin
+$margin-lg: 3rem; // Large margin
+$margin-xl: 4rem; // Extra large margin
+
+// Padding variables
+$padding-xs: 0.5rem; // Extra small padding
+$padding-sm: 1rem; // Small padding
+$padding-md: 2rem; // Medium padding
+$padding-lg: 3rem; // Large padding
+$padding-xl: 4rem; // Extra large padding
+
+// Border Radius Variables
+$border-radius-none: 0; // No border-radius
+$border-radius-sm: 0.25rem; // Small border-radius (4px)
+$border-radius-md: 0.5rem; // Medium border-radius (8px)
+$border-radius-lg: 1rem; // Large border-radius (16px)
+$border-radius-xl: 1.5rem; // Extra large border-radius (24px)
+$border-radius-xxl: 2rem; // Super large border-radius (32px)
+$border-radius-circle: 50%; // Perfectly circular (used for avatars, buttons, etc.)
+$border-radius-pill: 9999px; // Fully rounded, pill-like shape
+
+// Primary Colors
+$primary-color: #3366cc; // Neutral blue for brand and action elements
+$primary-light: lighten($primary-color, 12%); // Lighter blue
+$primary-dark: darken($primary-color, 12%); // Darker blue
+
+// Secondary Colors
+$secondary-color: #5a5a5a; // Neutral dark gray for secondary elements
+$secondary-light: lighten($secondary-color, 15%);
+$secondary-dark: darken($secondary-color, 15%);
+
+// Accent Colors
+$accent-color: #ff9900; // Vibrant orange for highlights and calls to action
+$accent-light: lighten($accent-color, 12%);
+$accent-dark: darken($accent-color, 12%);
+
+// Neutral Colors
+$neutral-lightest: #f7f8fa; // Almost white for light backgrounds
+$neutral-light: #e5e5e5; // Light gray for subtle backgrounds
+$neutral: #8a8a8a; // Neutral gray for text and borders
+$neutral-dark: #4d4d4d; // Dark gray for emphasis
+$neutral-darkest: #1f1f1f; // Almost black for strong contrasts
+
+// Background Colors
+$background-light: #ffffff; // Default white background
+$background-dark: #262626; // Default dark background (dark gray)
+
+// Text Colors
+$text-primary: #1f1f1f; // Dark primary text color
+$text-secondary: #5a5a5a; // Secondary text color (dark gray)
+$text-muted: #9b9b9b; // Muted text color (light gray)
+$text-white: #ffffff; // White for text on dark backgrounds
+
+// Border Colors
+$border-light: #dcdcdc; // Light borders for containers and inputs
+$border-dark: #3e3e3e; // Darker border for emphasis
+$border-muted: #c1c1c1; // Muted border for subtle separations
+
+// Status/Feedback Colors
+$success-color: #2ecc71; // Green for success and confirmations
+$danger-color: #e74c3c; // Red for errors and alerts
+$warning-color: #f1c40f; // Yellow for warnings
+$info-color: #3498db; // Light blue for informational messages
+
+// Additional Useful Colors
+$black: #000000; // Pure black for critical elements
+$white: #ffffff; // Pure white for clean layouts
+$transparent: rgba(0, 0, 0, 0); // Transparent for overlays or effects
+
+// Optional Shades for Effects
+$shadow-light: rgba(0, 0, 0, 0.08); // Soft shadow for subtle depth
+$shadow-dark: rgba(0, 0, 0, 0.25); // Strong shadow for pronounced depth

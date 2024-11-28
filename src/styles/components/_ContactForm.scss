@@ -1,0 +1,77 @@
+.contact-form {
+  flex: 1 1 48%;
+  display: flex;
+  flex-direction: column;
+  gap: $margin-md;
+  padding: $padding-md;
+  background-color: $neutral-lightest; // Light background color
+  border-radius: $border-radius-md;
+  box-shadow: 0 4px 6px $shadow-light; // Light shadow for subtle depth
+
+  &-message {
+    background-color: $neutral-light; // Lighter background for the message box
+    padding: $padding-md;
+    margin-bottom: $margin-lg;
+    border-radius: $border-radius-md;
+    border-left: 5px solid $primary-color; // Bold left border with primary color
+    color: $text-primary; // Primary text color
+    font-size: $font-size-sm; // Smaller font for the message
+    font-weight: 500;
+    line-height: $line-height-normal;
+    text-align: center;
+    box-shadow: 0 2px 8px $shadow-light; // Soft shadow for depth
+
+    // Responsive styles
+    @media screen and (max-width: 768px) {
+      font-size: $font-size-xs; // Adjust font size on smaller screens
+      padding: $padding-sm;
+    }
+
+    &:hover {
+      background-color: lighten($neutral-light, 5%); // Slightly darker on hover
+      border-left: 5px solid darken($primary-color, 10%); // Darken border on hover
+    }
+
+    // Message icon (optional, FontAwesome or similar icon)
+    &::before {
+      content: "\f0e0"; // FontAwesome icon for the message bubble
+      font-family: "FontAwesome";
+      margin-right: $margin-sm;
+      font-size: $font-size-lg;
+      color: $primary-color; // Primary color for the icon
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    input,
+    textarea {
+      margin-bottom: $margin-md; // Consistent margin between inputs
+      padding: $padding-sm;
+      border: 1px solid $border-muted; // Muted border color for inputs
+      border-radius: $border-radius-md;
+      font-size: $font-size-sm;
+      transition: border-color 0.3s ease-in-out;
+
+      &:focus {
+        border-color: $primary-color; // Primary color on focus
+      }
+    }
+
+    textarea {
+      min-height: 120px;
+    }
+  }
+
+  .error {
+    color: $danger-color; // Red for error messages
+    font-size: $font-size-xs;
+  }
+
+  .form-status {
+    font-size: $font-size-sm;
+    color: $primary-color; // Use primary color for success or informational statuses
+  }
+}

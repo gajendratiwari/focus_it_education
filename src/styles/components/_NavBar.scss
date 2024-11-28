@@ -1,0 +1,228 @@
+/* Navbar Styles */
+.navbar {
+  width: 100%;
+  background: linear-gradient(to right, $primary-color, $primary-dark);
+  color: $text-white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px $shadow-light;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $padding-sm $padding-md;
+
+    &__logo {
+      font-size: $font-size-xl;
+      font-weight: bold;
+      color: $text-white;
+
+      img {
+        width: 30px;
+        height: 30px;
+        border-radius: $border-radius-circle; /* Make it circular */
+      }
+    }
+  }
+
+  &__toggle {
+    all: unset;
+    display: none;
+    cursor: pointer;
+    font-size: $font-size-lg;
+    color: $text-white;
+
+    @include respond-to("medium-down") {
+      display: block;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $background-light;
+    border-radius: $border-radius-md;
+    box-shadow: 0 4px 8px $shadow-dark;
+    margin: $margin-xs;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+
+    &--open {
+      max-height: 500px;
+      visibility: visible;
+      padding: $padding-sm 0;
+    }
+
+    @include respond-to("large-up") {
+      position: static;
+      display: flex;
+      background-color: $background-dark;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      max-height: none;
+      visibility: visible;
+      margin: 0;
+      padding: 0;
+
+      box-shadow: none;
+      border-radius: 0;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $margin-xs;
+
+    @include respond-to("large-up") {
+      flex-direction: row;
+      gap: $margin-sm;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: $font-size-sm;
+      color: $neutral-dark;
+      background-color: $neutral-lightest;
+      padding: $padding-xs $padding-sm;
+      border-radius: $border-radius-sm;
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s;
+
+      &:hover,
+      &.active {
+        background-color: $primary-color;
+        color: $text-white;
+        transform: scale(1.05);
+      }
+
+      @include respond-to("large-up") {
+        color: $text-white;
+        background-color: transparent;
+        transform: none;
+        &:hover {
+          background-color: rgba($white, 0.2);
+        }
+      }
+    }
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    gap: $margin-xs;
+    margin: $margin-xs $margin-sm 0 0;
+
+    @include respond-to("large-up") {
+      margin-top: 0;
+    }
+
+    &-input {
+      padding: $padding-xs $padding-sm;
+      border: 1px solid $border-muted;
+      border-radius: $border-radius-sm;
+      font-size: $font-size-sm;
+      outline: none;
+      width: 100%;
+      background-color: $background-light;
+
+      @include respond-to("large-up") {
+        width: 200px;
+      }
+
+      &:focus {
+        border-color: $primary-color;
+        box-shadow: 0 0 5px $primary-light;
+      }
+    }
+
+    button {
+      padding: $padding-xs $padding-sm;
+      background-color: $primary-color;
+      color: $text-white;
+      border: none;
+      border-radius: $border-radius-sm;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: $primary-dark;
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: $margin-sm;
+
+    @include respond-to("medium-down") {
+      display: none;
+    }
+    .navbar__phone {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      color: $text-white;
+      font-size: $font-size-md;
+      font-weight: bold;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $accent-color;
+      }
+
+      &:before {
+        content: "📞";
+        margin-right: 5px; // Adds spacing between the icon and text
+      }
+    }
+
+    .navbar__login {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      color: $text-white;
+      font-size: $font-size-md;
+      font-weight: bold;
+      transition: color 0.3s ease;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: $padding-xs $padding-sm;
+
+    li {
+      width: 100%;
+      text-align: left;
+
+      a {
+        width: 100%;
+        text-align: left;
+        font-size: $font-size-sm;
+        padding: $padding-xs $padding-sm;
+        border-bottom: 1px solid $border-light;
+
+        &:hover {
+          background-color: $primary-color;
+          color: $text-white;
+        }
+      }
+    }
+  }
+}

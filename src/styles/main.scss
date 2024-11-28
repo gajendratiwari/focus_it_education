@@ -1,0 +1,40 @@
+//imports from bases
+@import "./base/variables";
+@import "./base/mixins";
+@import "./base/reset";
+
+//import from components
+@import "./components/NavBar"; //import from pages
+@import "./components/Footer";
+@import "./components/Button";
+@import "./components/ContactForm";
+@import "./components/Testimonials";
+//import from pages
+@import "./pages/NotFoundPage";
+@import "./pages/Contact";
+@import "./pages/About";
+@import "./pages/Home";
+@import "./pages/OurService";
+@import "./pages/CourseDetails";
+
+/* root.scss */ /* Global container class */
+html {
+  scroll-behavior: smooth;
+}
+
+.app {
+  max-width: 100%;
+  margin: 0 auto; /* Center the container */
+
+  @include respond-to("medium") {
+    //Tablet view
+    padding-left: $tablet-padding;
+    padding-right: $tablet-padding;
+  }
+
+  @include respond-to("small") {
+    /* Mobile view */
+    padding-left: $mobile-padding;
+    padding-right: $mobile-padding;
+  }
+}

@@ -1,0 +1,167 @@
+.services {
+  font-family: "Arial", sans-serif;
+  line-height: $line-height-normal;
+
+  section {
+    padding: $padding-lg $mobile-padding;
+    text-align: center;
+
+    h1 {
+      margin-bottom: $margin-sm;
+      font-size: $heading-font-size-h1;
+      color: $text-white;
+    }
+
+    p {
+      max-width: 800px;
+      margin: 0 auto $margin-sm;
+      font-size: $font-size-md;
+      color: $text-muted;
+    }
+
+    h2 {
+      margin-bottom: $margin-sm;
+      font-size: $heading-font-size-h2;
+      color: $text-primary;
+    }
+  }
+
+  .services-intro {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../../assets/images/course.jpg"); // Replace with the actual image path
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: $padding-xl $mobile-padding;
+    color: $text-white;
+  }
+
+  .service-details {
+    background: $background-light;
+
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: $margin-md;
+      margin-top: $margin-lg;
+
+      .service {
+        background: $neutral-lightest;
+        padding: $padding-md;
+        border-radius: $border-radius-md;
+        box-shadow: 0 4px 6px $shadow-light;
+        text-align: center;
+
+        .service-icon {
+          font-size: $font-size-xxl;
+          color: $success-color;
+          margin-bottom: $margin-sm;
+        }
+
+        h3 {
+          margin-bottom: $margin-sm;
+          font-size: $heading-font-size-h4;
+        }
+
+        p {
+          color: $text-secondary;
+          font-size: $font-size-sm;
+        }
+
+        button {
+          margin-top: $margin-sm;
+          background-color: $primary-color;
+          color: $text-white;
+          padding: $padding-sm $padding-md;
+          border: none;
+          border-radius: $border-radius-pill;
+          cursor: pointer;
+
+          &:hover {
+            background-color: $primary-dark;
+          }
+        }
+      }
+    }
+  }
+
+  .service-process {
+    .steps {
+      display: flex;
+      justify-content: center;
+      gap: $margin-md;
+
+      .step {
+        text-align: center;
+
+        .step-icon {
+          font-size: $font-size-xl;
+          color: $success-color;
+          margin-bottom: $margin-sm;
+        }
+
+        p {
+          font-size: $font-size-md;
+          color: $text-muted;
+        }
+      }
+    }
+  }
+
+  .faqs {
+    .faq {
+      margin-bottom: $margin-md;
+
+      h3 {
+        font-size: $heading-font-size-h4;
+        margin-bottom: $margin-sm;
+        color: $text-primary;
+      }
+
+      p {
+        color: $text-secondary;
+      }
+    }
+  }
+}
+
+@include respond_to("medium") {
+  .services {
+    section {
+      h1 {
+        margin-bottom: $margin-sm;
+        font-size: $heading-font-size-h3;
+      }
+
+      p {
+        max-width: 800px;
+
+        font-size: $font-size-sm;
+      }
+
+      h2 {
+        font-size: $heading-font-size-h3;
+      }
+    }
+  }
+}
+@include respond_to("small") {
+  .services {
+    section {
+      h1 {
+        margin-bottom: $margin-sm;
+        font-size: $heading-font-size-h3;
+      }
+
+      p {
+        max-width: 800px;
+
+        font-size: $font-size-sm;
+      }
+
+      h2 {
+        font-size: $heading-font-size-h3;
+      }
+    }
+  }
+}

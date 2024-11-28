@@ -1,0 +1,158 @@
+.footer {
+  background-color: $primary-color;
+  color: $text-white;
+
+  .footer-wave-svg {
+    background-color: transparent;
+    display: block;
+    height: $padding-md;
+    position: relative;
+    top: -1px;
+    width: 100%;
+
+    .footer-wave-path {
+      fill: $background-light;
+    }
+  }
+
+  .footer-content {
+    margin: 0 auto;
+    line-height: $line-height-loose;
+    padding: $padding-lg $padding-sm $padding-xl; // Use padding variables
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .footer-content-column {
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      align-items: center;
+      width: 100%;
+      color: $text-white;
+      margin-bottom: $margin-md;
+    }
+
+    .footer-logo {
+      img {
+        height: 50px;
+        width: 50px;
+        border-radius: $border-radius-pill;
+      }
+    }
+
+    @include respond-to("large-up") {
+      .footer-content-column {
+        width: 23.99%;
+      }
+    }
+  }
+
+  .footer-social-links {
+    height: $padding-xl;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 236px;
+
+    .footer-social-amoeba-svg {
+      height: $padding-xl;
+      left: 0;
+      display: block;
+      position: absolute;
+      top: 0;
+      width: 236px;
+
+      .footer-social-amoeba-path {
+        fill: $secondary-color;
+      }
+    }
+
+    .footer-social-link {
+      display: block;
+      padding: $padding-xs;
+      position: absolute;
+
+      &.facebook {
+        height: $font-size-lg;
+        left: 3px;
+        top: $padding-sm;
+        width: $font-size-lg;
+      }
+
+      &.instagram {
+        height: $font-size-lg + $padding-xs;
+        left: 62px;
+        top: $padding-xs;
+        width: $font-size-lg + $padding-xs;
+      }
+
+      .footer-social-icon-svg {
+        display: block;
+
+        .footer-social-icon-path {
+          fill: $background-light;
+          transition: fill 0.2s;
+        }
+      }
+    }
+  }
+
+  .footer-copyright {
+    background-color: $secondary-color;
+    color: $text-white;
+    padding: $padding-sm $padding-md;
+    margin-top: $margin-xs;
+    text-align: center;
+
+    .footer-copyright-wrapper {
+      margin: 0 auto;
+      max-width: 1200px;
+
+      .footer-copyright-text {
+        color: $text-white;
+        font-size: $font-size-sm;
+        font-weight: 400;
+        line-height: $line-height-normal;
+        margin: 0;
+      }
+
+      .footer-copyright-link {
+        color: $text-white;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// Media Queries
+
+@include respond-to("medium-up") {
+  .footer-content {
+    text-align: center;
+    padding: $padding-md $padding-sm $padding-xl;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .footer-content-column {
+      width: 25%; // Equal width for alignment
+      margin-bottom: $margin-md;
+    }
+  }
+}
+
+@include respond-to("small") {
+  .footer-content {
+    text-align: center;
+    flex-direction: column; // Stack columns vertically
+    align-items: center;
+
+    .footer-content-column {
+      width: 100%; // Full width for all columns
+      margin-bottom: $margin-sm;
+    }
+  }
+}

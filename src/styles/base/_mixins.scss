@@ -1,0 +1,35 @@
+// _mixins.scss or your custom file for mixins
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == "small" {
+    // For small devices, max-width of 599px
+    @media (max-width: 599px) {
+      @content;
+    }
+  } @else if $breakpoint == "medium" {
+    // For medium devices, min-width 600px and max-width 1024px
+    @media (min-width: 600px) and (max-width: 1024px) {
+      @content;
+    }
+  } @else if $breakpoint == "large" {
+    // For large devices, min-width of 1025px
+    @media (min-width: 1025px) {
+      @content;
+    }
+  } @else if $breakpoint == "medium-up" {
+    // For medium and up, min-width 600px
+    @media (min-width: 600px) {
+      @content;
+    }
+  } @else if $breakpoint == "medium-down" {
+    // For medium and down, max-width 1024px
+    @media (max-width: 1024px) {
+      @content;
+    }
+  } @else if $breakpoint == "large-up" {
+    // For large and up, min-width 1025px
+    @media (min-width: 1025px) {
+      @content;
+    }
+  }
+}

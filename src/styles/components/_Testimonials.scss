@@ -1,0 +1,111 @@
+.testimonials {
+  position: relative;
+  text-align: center;
+  padding: $padding-lg $padding-sm;
+  background-color: $background-light;
+  border-radius: $border-radius-lg;
+  box-shadow: 0 4px 8px $shadow-light;
+  max-width: 1000px;
+  margin: $margin-sm auto;
+
+  h2 {
+    font-size: $font-size-lg;
+    margin-bottom: $margin-sm;
+    color: $text-primary;
+    font-weight: bold;
+  }
+
+  .testimonial-list {
+    display: flex;
+    flex-direction: column;
+    gap: $margin-md;
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: $padding-sm;
+
+    blockquote {
+      font-size: $font-size-md;
+      font-style: italic;
+      color: $text-muted;
+      text-align: center;
+      padding: $padding-md;
+      background-color: $background-light;
+      border-radius: $border-radius-md;
+      box-shadow: 0 2px 4px $shadow-light;
+      position: relative;
+
+      .author {
+        display: flex;
+        align-items: center;
+        gap: $margin-xs;
+        margin-bottom: $margin-xs;
+
+        .author-image {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          object-fit: cover;
+          border: 2px solid $primary-color;
+          box-shadow: 0 2px 4px $shadow-light;
+        }
+
+        cite {
+          font-size: $font-size-sm;
+          color: $text-primary;
+          font-weight: bold;
+        }
+      }
+
+      p {
+        margin-top: $margin-sm;
+      }
+    }
+  }
+
+  .testimonial-nav {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 10;
+
+    .nav-button {
+      background-color: $primary-color;
+      border: none;
+      font-size: $font-size-md;
+      color: $text-white;
+      cursor: pointer;
+      padding: $padding-sm;
+      border-radius: $border-radius-circle;
+      box-shadow: 0 4px 6px $shadow-light;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: $primary-light;
+        box-shadow: 0 6px 12px $shadow-dark;
+        transform: scale(1.1);
+      }
+
+      &:active {
+        background-color: $primary-dark;
+        box-shadow: 0 2px 4px $shadow-light;
+        transform: scale(0.95);
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba($primary-color, 0.5);
+      }
+
+      &:disabled {
+        background-color: $neutral-light;
+        cursor: not-allowed;
+        box-shadow: none;
+      }
+    }
+  }
+}

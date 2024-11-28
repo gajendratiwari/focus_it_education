@@ -1,0 +1,112 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border: none;
+  border-radius: $border-radius-md; // 0.5rem for a medium border radius
+  padding: $padding-sm $padding-md; // 1rem x 2rem padding
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+  text-align: center;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    transform: none;
+  }
+
+  /* Variants */
+  &--primary {
+    background-color: $primary-color; // Primary blue
+    color: $text-white;
+
+    &:hover {
+      background-color: $primary-dark; // Darker shade of primary blue
+    }
+  }
+
+  &--secondary {
+    background-color: $neutral-light; // Light gray
+    color: $neutral-dark; // Darker gray for text
+
+    &:hover {
+      background-color: $neutral-lightest; // Even lighter gray
+    }
+  }
+
+  &--danger {
+    background-color: $danger-color; // Red for danger
+    color: $text-white;
+
+    &:hover {
+      background-color: darken($danger-color, 10%); // Slightly darker red
+    }
+  }
+
+  &--outline {
+    background-color: transparent;
+    border: 2px solid $primary-color; // Primary color border
+    color: $primary-color;
+
+    &:hover {
+      background-color: $primary-color;
+      color: $text-white;
+    }
+  }
+
+  /* Sizes */
+  &--small {
+    padding: $padding-xs $padding-sm; // Small padding
+    font-size: $font-size-xs; // Extra small font size (12px)
+  }
+
+  &--medium {
+    padding: $padding-sm $padding-md; // Default button padding
+    font-size: $font-size-sm; // Small font size (16px)
+  }
+
+  &--large {
+    padding: $padding-md $padding-lg; // Larger padding
+    font-size: $font-size-md; // Medium font size (20px)
+  }
+}
+/* Responsive adjustments for smaller screens */
+@include respond-to("medium") {
+  .btn--small {
+    padding: $padding-xs $padding-sm; // Small padding
+    font-size: $font-size-xs; // Extra small font size (12px)
+  }
+
+  .btn--medium {
+    padding: $padding-xs $padding-sm; // Small padding
+    font-size: $font-size-xs; // Extra small font size (12px)
+  }
+
+  .btn--large {
+    padding: $padding-xs $padding-sm; // Small padding
+    font-size: $font-size-xs; // Extra small font size (12px)
+  }
+}
+
+/* Responsive adjustments for smaller screens */
+@include respond-to("small") {
+  .btn--small {
+    padding: $padding-xs $padding-sm; // Small padding
+    font-size: $font-size-xs; // Extra small font size (12px)
+  }
+
+  .btn--medium {
+    padding: $padding-xs $padding-sm; // Small padding
+    font-size: $font-size-xs; // Extra small font size (12px)
+  }
+
+  .btn--large {
+    padding: $padding-xs $padding-sm; // Small padding
+    font-size: $font-size-xs; // Extra small font size (12px)
+  }
+}

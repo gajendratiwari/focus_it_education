@@ -1,0 +1,132 @@
+// General Styles for ContactUs
+.contact-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+// Header Section
+.contact-header {
+  position: relative;
+  height: 50vh;
+  background: linear-gradient(rgba(14, 12, 12, 0.5), rgba(9, 2, 2, 0.5)),
+    url("../../assets/images/contact.jpg") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+  text-align: center;
+  padding: $padding-lg;
+
+  /* Overlay using ::before */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(7, 6, 6, 0.4); /* Overlay color */
+    z-index: 0; /* Ensure it stays behind the content */
+  }
+
+  h1 {
+    font-size: $heading-font-size-h1; // Use h1 font-size variable
+    margin: 0;
+    line-height: $line-height-tight; // Tight line height
+  }
+
+  p {
+    font-size: $font-size-lg; // Use large font size for paragraph
+    margin-top: $margin-md; // Medium margin for spacing
+    max-width: 600px;
+    line-height: $line-height-normal;
+  }
+}
+
+// Contact Content Section
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: $margin-lg; // Large gap between items
+  margin: $margin-lg 0;
+
+  .contact-details {
+    flex: 1 1 48%;
+    background: $neutral-lightest; // Light background color
+    padding: $padding-lg; // Use large padding for better spacing
+    border-radius: $border-radius-md; // Medium border-radius
+    box-shadow: 0 4px 6px $shadow-light; // Light shadow for subtle depth
+
+    h3 {
+      font-size: $heading-font-size-h3;
+      padding-bottom: $padding-md;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: $margin-sm; // Small margin between list items
+        font-size: $font-size-sm; // Small font size for list items
+
+        strong {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+// Map Section
+.map {
+  margin: $margin-lg 0;
+
+  iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: $border-radius-md; // Medium border-radius for rounded corners
+  }
+}
+
+// Responsive Design for Medium and Small Screens
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+    gap: $margin-md; // Smaller gap for mobile
+  }
+
+  .contact-header {
+    h1 {
+      font-size: $heading-font-size-h2; // Use h2 font size on medium screens
+    }
+
+    p {
+      font-size: $font-size-md; // Medium font size for paragraph on smaller screens
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-header {
+    padding: $padding-md; // Adjust padding for smaller screens
+
+    h1 {
+      font-size: $heading-font-size-h3; // Smaller h1 on small screens
+    }
+
+    p {
+      font-size: $font-size-sm; // Smaller paragraph font size on mobile
+    }
+  }
+
+  .contact-content {
+    .form,
+    .contact-details {
+      padding: $padding-sm; // Reduce padding on mobile
+    }
+  }
+}

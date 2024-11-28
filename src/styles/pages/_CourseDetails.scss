@@ -1,0 +1,51 @@
+.course-detail {
+  padding: $padding-md;
+  background-color: $background-light;
+  color: $text-primary;
+  text-align: center;
+
+  p {
+    font-size: $font-size-md;
+  }
+  h1 {
+    font-size: $heading-font-size-h1;
+    margin-bottom: $margin-md;
+    color: $primary-color;
+  }
+
+  .duration {
+    font-size: $font-size-md;
+    margin-bottom: $margin-md;
+    color: $neutral-dark;
+  }
+
+  .description {
+    font-size: $font-size-md;
+    margin-bottom: $margin-lg;
+    color: $text-secondary;
+  }
+
+  h2 {
+    font-size: $heading-font-size-h2;
+    margin: $margin-md 0 $margin-md 0;
+    color: $text-primary;
+  }
+
+  li {
+    font-size: $font-size-md;
+    margin-bottom: $margin-xs;
+  }
+
+  .note {
+    margin-top: $margin-md;
+    font-size: $font-size-sm;
+    color: $danger-color;
+  }
+
+  .error {
+    font-size: $font-size-lg;
+    color: $danger-color;
+    text-align: center;
+    margin-top: $margin-lg;
+  }
+}

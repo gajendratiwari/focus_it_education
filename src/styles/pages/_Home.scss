@@ -1,0 +1,163 @@
+.home {
+  .header {
+    position: relative; /* Ensure relative positioning for proper stacking */
+    background: linear-gradient(rgba(14, 12, 12, 0.5), rgba(9, 2, 2, 0.5)),
+      url("../../assets/images/home.JPG") center/cover no-repeat;
+    color: $text-white;
+    padding: $padding-lg $padding-sm;
+    text-align: center;
+
+    /* Overlay using ::before */
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(7, 6, 6, 0.4); /* Overlay color */
+      z-index: 0; /* Ensure it stays behind the content */
+    }
+
+    &-content {
+      position: relative; /* Ensure content stays above the overlay */
+      max-width: 65%;
+      margin: 0 auto;
+      z-index: 1; /* Place above the ::before element */
+
+      .header-title {
+        font-size: $heading-font-size-h1;
+        font-weight: bold;
+        color: $text-white;
+      }
+
+      .header-subtitle {
+        font-size: $font-size-lg;
+        margin: $margin-sm 0;
+      }
+    }
+  }
+
+  .about {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    margin-bottom: 30px;
+
+    h1 {
+      font-size: 2.5em;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1em;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .cta {
+      font-size: 1.2em;
+      color: #0056b3;
+      font-weight: bold;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: $margin-md;
+
+      .feature {
+        background: $background-light;
+        padding: $padding-md;
+        border-radius: $border-radius-md;
+        box-shadow: 0 4px 6px $shadow-light;
+        text-align: center;
+
+        h3 {
+          font-size: $font-size-lg;
+          margin-bottom: $margin-sm;
+        }
+
+        p {
+          font-size: $font-size-sm;
+          color: $text-muted;
+        }
+      }
+    }
+  }
+  .popular-courses {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #333;
+    }
+
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+
+      .course-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+        color: #333;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+
+        img {
+          width: 50px;
+          height: 50px;
+          margin-bottom: 10px;
+        }
+
+        .title {
+          font-size: 16px;
+          font-weight: bold;
+          text-align: center;
+        }
+      }
+    }
+  }
+  @include respond-to("medium") {
+    .header {
+      &-content {
+        .header-title {
+          font-size: $heading-font-size-h3;
+        }
+        .header-subtitle {
+          font-size: $font-size-sm;
+        }
+      }
+    }
+  }
+  @include respond-to("small") {
+    .header {
+      &-content {
+        .header-title {
+          font-size: $heading-font-size-h3;
+        }
+        .header-subtitle {
+          font-size: $font-size-sm;
+        }
+      }
+    }
+  }
+}
